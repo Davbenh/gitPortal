@@ -3,54 +3,40 @@ let totalPlayers;
 const playersDataBase = []
 const gamesData = [{
     id: 101,
-    name: "Memory game 1",
-    desc: "this memory game build by dudu ben hamo",
-    link: "./games/101/index.html",
+    name: "המשחק של ישראל",
+    desc: "משחק הזיכרון של ישראל, המשחק בסגנון הארי פוטר.",
+    link: "./games/yisrael/index.html",
     imgUrl: "./gamesImages/101.jpg",
     rating: 0
 }, {
     id: 102,
-    name: "Memory game 2",
-    desc: "this memory game build by someone",
-    link: "./games/102/index.html",
+    name: "המשחק של גיל כוכבי",
+    desc: "משחק הזיכרון של גיל, בסגנון מארוול. חובה לשחק ולהנות!",
+    link: "./games/gil/index.html",
     imgUrl: "./gamesImages/102.jpg",
     rating: 0
 }, {
     id: 103,
-    name: "Memory game 3",
-    desc: "this memory game build by someone",
-    link: "./games/103/index.html",
+    name: "המשחק של קובי",
+    desc: "משחק הזיכרון של קובי, משחק זכרון אותיות.",
+    link: "./games/kobi/index.html",
     imgUrl: "./gamesImages/103.jpg",
     rating: 0
 }, {
     id: 104,
-    name: "Memory game 4",
-    desc: "this memory game build by someone",
-    link: "./games/104/index.html",
+    name: "משחק הזיכרון של אלישע",
+    desc: "המשחק של אלישע אייזק, משחק בעלי החיים.",
+    link: "./games/elisha/index.html",
     imgUrl: "./gamesImages/104.jpg",
     rating: 0
 }, {
     id: 105,
-    name: "Memory game 5",
-    desc: "this memory game build by someone",
-    link: "./games/105/index.html",
+    name: "משחק הזיכרון של דודו",
+    desc: "משחק הזיכרון של דודו, משחק הצבעים.",
+    link: "./games/dudu/index.html",
     imgUrl: "./gamesImages/105.jpg",
     rating: 0
-}, {
-    id: 106,
-    name: "Memory game 6",
-    desc: "this memory game build by someone",
-    link: "./games/106/index.html",
-    imgUrl: "./gamesImages/106.jpg",
-    rating: 0
-}, {
-    id: 107,
-    name: "Memory game 7",
-    desc: "this memory game build by someone",
-    link: "./games/107/index.html",
-    imgUrl: "./gamesImages/107.jpg",
-    rating: 0
-}, ]
+}]
 
 const popup = document.getElementById("introPopup");
 const spanclose = document.getElementsByClassName("close")[0];

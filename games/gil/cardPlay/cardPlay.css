@@ -36,8 +36,8 @@ button {
 
 .memory-game {
   margin-top: 10px;
-  width: 640px;
-  height: 640px;
+  width: 80vw;
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
@@ -53,12 +53,12 @@ button {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   transform: scale(1);
   transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .memory-card:active {
   transform: scale(0.97);
-  transition: transform 0.2s;
+  transition: transform 0.1s;
   
 }
 
