@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./cardplay.js" defer></script>
+    <link rel="stylesheet" href="./cardPlay.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="controls">
+        <button>Start</button>
+        <div class="stats">
+          <div class="moves">moves:</div>
+          <span class="timer" id="stopwatch">00:00:00</span>
+        </div>
+      </div>
+      <div class="board-container">
+        <div class="board" data-dimension="4"></div>
+        <div class="win"></div>
+      </div>
+    </div>
+
+    <section class="memory-game" id="gameBoard">
+      <div class="memory-card" data-framework="CaptainAmerica">
+        <img
+          class="front-face"
+          src="https://www.lastprice.co.il/uploadimages/original.jpeg"
+          alt="CaptainAmerica "
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="CaptainAmerica">
+        <img
+          class="front-face"
+          src="https://www.lastprice.co.il/uploadimages/original.jpeg"
+          alt="CaptainAmerica "
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="Iron Man">
+        <img
+          class="front-face"
+          src="https://m.media-amazon.com/images/I/61Ua6YK1nuL._AC_SY550_.jpg"
+          alt="Iron Man"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="Iron Man">
+        <img
+          class="front-face"
+          src="https://m.media-amazon.com/images/I/61Ua6YK1nuL._AC_SY550_.jpg"
+          alt="Iron Man"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="hulk">
+        <img
+          class="front-face"
+          src="https://sm.ign.com/ign_il/screenshot/default/hulk_ge9f.jpg"
+          alt="hulk"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="hulk">
+        <img
+          class="front-face"
+          src="https://sm.ign.com/ign_il/screenshot/default/hulk_ge9f.jpg"
+          alt="hulk"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="spider-man">
+        <img
+          class="front-face"
+          src="https://www.funpo.co.il/images/thumbs/0006247_-spiderman-bust-bank_480.jpeg"
+          alt="spider-man"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="spider-man">
+        <img
+          class="front-face"
+          src="https://www.funpo.co.il/images/thumbs/0006247_-spiderman-bust-bank_480.jpeg"
+          alt="spider-man"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="Thor">
+        <img
+          class="front-face"
+          src="https://pbs.twimg.com/media/FIOKt-AX0AAXAfX.jpg"
+          alt="Thor"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="Thor">
+        <img
+          class="front-face"
+          src="https://pbs.twimg.com/media/FIOKt-AX0AAXAfX.jpg"
+          alt="Thor"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="black-panther">
+        <img
+          class="front-face"
+          src="https://www.kindpng.com/picc/m/105-1056106_marvel-black-panther-png-avengers-black-panther-cartoon.png"
+          alt="black-panther"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+
+      <div class="memory-card" data-framework="black-panther">
+        <img
+          class="front-face"
+          src="https://www.kindpng.com/picc/m/105-1056106_marvel-black-panther-png-avengers-black-panther-cartoon.png"
+          alt="black-panther"
+          draggable="false"
+        />
+        <img
+          class="back-face"
+          src="https://yt3.ggpht.com/wrYZC8Xc2tnvbN0829U34qUnjD8Fx-k43sQUh4hm1ZHF4P8iITpr7eYvyZ0F8fukymG4mwYEQg=s900-c-k-c0x00ffffff-no-rj"
+          alt="Memory Card"
+          draggable="false"
+        />
+      </div>
+    </section>
+  </body>
+</html>
