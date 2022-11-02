@@ -1,14 +1,14 @@
 const cards = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F'];
 
-// let score = 0;
-// let scoreA = 0;
-// let scoreB = 0;
-// let counter = 0;
+let score = 0;
+let scoreA = 0;
+let scoreB = 0;
+let counter = 0;
 
-// let val1 = document.querySelector("#player1")
-// console.log(val1.value)
-// let val2 = document.querySelector("#player2")
-// console.log(val2.value)
+let val1 = document.querySelector("#player1")
+console.log(val1.value)
+let val2 = document.querySelector("#player2")
+console.log(val2.value)
 
 document.getElementById("score").innerText =`Your score: ` + score.toString();
 function shufle(cards) {
