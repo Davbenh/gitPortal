@@ -1,0 +1,77 @@
+/* This memory game built by Dudu Ben-hamo 2022 */
+
+//used variables
+const cards = document.getElementById('cards');
+let cardsPack = document.getElementsByClassName('cards');
+const divElement = document.getElementById("board");
+
+let cardsColor = ["red", "blue", "green", "yellow"]
+
+function btnHeadinOff() {
+    let headerText = document.getElementsByClassName('header');
+    headerText[0].style.visibility = 'hidden';
+}
+
+function btnHeadinOn() {
+    let headerText = document.getElementsByClassName('header');
+    headerText[0].style.visibility = 'visible';
+}
+
+function removeCards() { //removig the cards
+    let cardsR = document.querySelectorAll('.cards');
+    return cardsR.forEach(cards => {
+        cards.remove();
+    })
+}
+
+function shuffle(arr) { //shuffeling the cards
+    //TODO shufle of cards
+    let currentIndex = arr.length,
+        randomIndex;
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        // And swap it with the current element.
+        const temp = arr[currentIndex]
+        arr[currentIndex] = arr[randomIndex]
+        arr[randomIndex] = temp
+    }
+    return arr;
+}
+
+function deal(x) { // this function is the main dealer
+    let y = x;
+    for (i = 0; i = x; x--) {
+        const newElement = document.createElement("div");
+        divElement.appendChild(newElement)
+        newElement.classList.add('cards')
+    }
+    let tempColors = shuffle(cardsColor);
+    let cardsR = document.querySelectorAll('.cards');
+    for (i = 0; i < y; i++) {
+
+        cardsR[i].id = tempColors[i];
+    }
+
+}
+
+
+
+
+
+
+
+function dealBtn(x) { // activated by pressing the buttons for deal 8 or 16 cards
+    if (cardsPack.length > 1) {
+        let newDealAlert = confirm('האם אתה בטוח שברצונך לחלק מחדש את הקלפים?')
+        if (newDealAlert == true) {
+            removeCards();
+            deal(x);
+        }
+    } else {
+        removeCards()
+        deal(x);
+    }
+}
