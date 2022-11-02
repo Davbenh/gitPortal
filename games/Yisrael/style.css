@@ -1,0 +1,19 @@
+.h1{
+    border: 3px navy;
+}
+
+.container{
+margin: 5px;;
+border: 1px teal;
+width: 100vh;
+height: 100vw;
+margin: 8px;
+}
+
+.main{
+    border: 1px solid blue;
+    width: 50%;
+    height: 50%;
+    margin: 8px;
+
+}

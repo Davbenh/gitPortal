@@ -1,0 +1,91 @@
+body{
+    background-image: url(./Quidditch_Pitch.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+/*#main{
+    width: 40%;
+    height: 25%;
+    border:ridge 3px;
+    border-radius: 25px;
+    border-color: darkgreen darkblue rgb(202, 7, 7) yellow;
+    position: fixed ;
+    right: 27%;
+    top: 50%;
+    transition: all 1s;
+}*/
+#main{
+    border: ridge 7px;
+    border-color: darkgreen darkblue rgb(202, 7, 7) yellow;
+    border-radius: 50px;
+    transition: 1s;
+}
+#main:hover{
+    box-shadow: 10px 0px 12px darkblue, 0px 10px 12px rgb(202, 7, 7), 
+    -10px 0px 12px yellow, 0px -10px 12px darkgreen;
+    background-image: url(./Quidditchpitch-main\ background.webp);
+    background-size: cover;
+}
+img{
+    width: 60px;
+    height: 70px;
+    border: ridge 5px;
+    border-color: goldenrod;
+    border-radius: 10px;
+    transition: 0.7s;
+    
+}
+img:hover{
+    box-shadow: 10px 0px 15px goldenrod, 0px 10px 15px goldenrod, 
+    -10px 0px 15px goldenrod, 0px -10px 15px goldenrod;
+}
+
+/* #pic{
+    border: ridge 3px;
+    border-color:goldenrod;
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:  30px;
+    width: 45px;
+    height: 70px;
+    float: left;
+    transition: all .5s;
+}
+#pic:hover{
+    box-shadow: 6px 6px 12px gold;
+    width: 50px;
+    height: 75px;
+}
+#harry, #malfoy, #vs{
+    width: 100px;
+    height: 150px;
+    
+}
+#vs{
+    width: 200px;
+    height: 75px;
+}
+#harry{
+    border: ridge 5px;
+    border-color: rgb(202, 7, 7) gold;
+    transition: 0.5s;
+    
+}
+#malfoy{
+    border: ridge 5px;
+    border-color: rgb(5, 115, 5) silver;
+    transition: 0.5s;
+}
+#harry:hover{
+    box-shadow: 10px 6px 12px gold,-6px -10px 12px gold;
+}
+#malfoy:hover{
+    box-shadow: 10px 6px 12px silver, -6px -10px 12px silver;
+} */
+
+ */
