@@ -12,7 +12,7 @@ const gamesData = [{
     id: 102,
     name: "המשחק של גיל כוכבי",
     desc: "משחק הזיכרון של גיל, בסגנון מארוול. חובה לשחק ולהנות!",
-    link: "./games/gil/index.html",
+    link: "./games/gil/cardPlay/index.html",
     imgUrl: "./gamesImages/102.jpg",
     rating: 0
 }, {
