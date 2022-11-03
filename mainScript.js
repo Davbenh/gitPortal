@@ -2,35 +2,35 @@
 let totalPlayers;
 const playersDataBase = []
 const gamesData = [{
-    id: 101,
+    id: 0,
     name: "המשחק של ישראל",
     desc: "משחק הזיכרון של ישראל, המשחק בסגנון הארי פוטר.",
     link: "./games/yisrael/index.html",
     imgUrl: "./gamesImages/101.jpg",
     rating: 0
 }, {
-    id: 102,
+    id: 1,
     name: "המשחק של גיל כוכבי",
     desc: "משחק הזיכרון של גיל, בסגנון מארוול. חובה לשחק ולהנות!",
     link: "./games/gil/cardPlay/index.html",
     imgUrl: "./gamesImages/102.jpg",
     rating: 0
 }, {
-    id: 103,
+    id: 2,
     name: "המשחק של קובי",
     desc: "משחק הזיכרון של קובי, משחק זכרון אותיות.",
     link: "./games/kobi/index.html",
     imgUrl: "./gamesImages/103.jpg",
     rating: 0
 }, {
-    id: 104,
+    id: 3,
     name: "משחק הזיכרון של אלישע",
     desc: "המשחק של אלישע אייזק, משחק בעלי החיים.",
     link: "./games/elisha/index.html",
     imgUrl: "./gamesImages/104.jpg",
     rating: 0
 }, {
-    id: 105,
+    id: 4,
     name: "משחק הזיכרון של דודו",
     desc: "משחק הזיכרון של דודו, משחק הצבעים.",
     link: "./games/dudu/index.html",
@@ -43,14 +43,20 @@ const spanclose = document.getElementsByClassName("close")[0];
 const pop1 = document.getElementById("pop1");
 const popIntro = document.getElementById("popIntro")
 const gameBoard = document.getElementsByClassName("gameBoard")[0]
+const main = document.getElementsByClassName("main")[0]
 
 gamesData.forEach((v) => {
-    return gameBoard.innerHTML += `<div class="gameButton" style="background-image: url(${v.imgUrl})"><a href="${v.link}"><span class="gameInfo">
+    return gameBoard.innerHTML += `<div class="gameButton" style="background-image: url(${v.imgUrl})"><span class="gameInfo" onclick=gameIframe(${v.id})>
 ${v.name} <br>
-${v.desc} <br>
+${v.desc} <br> 
 דירוג: ${v.rating}
-</span></a></div>`
+</span></div>`
 })
+
+function gameIframe(id) {
+    main.innerHTML = `<iframe src="${gamesData[id].link}" width="90%" height="90%" frameborder="0">`
+
+}
 
 
 
