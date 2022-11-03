@@ -1,6 +1,6 @@
 //GLOBAL V
 let totalPlayers;
-const playersDataBase = []
+let playersDataBase = []
 const gamesData = [{
     id: 0,
     name: "המשחק של ישראל",
@@ -45,20 +45,17 @@ const popIntro = document.getElementById("popIntro")
 const gameBoard = document.getElementsByClassName("gameBoard")[0]
 const main = document.getElementsByClassName("main")[0]
 
-gamesData.forEach((v) => {
-    return gameBoard.innerHTML += `<div class="gameButton" style="background-image: url(${v.imgUrl})"><span class="gameInfo" onclick=gameIframe(${v.id})>
-${v.name} <br>
-${v.desc} <br> 
-דירוג: ${v.rating}
-</span></div>`
-})
 
-function gameIframe(id) {
-    main.innerHTML = `<iframe src="${gamesData[id].link}" width="90%" height="90%" frameborder="0">`
 
+function init() {
+    playersDataBase = JSON.parse(window.localStorage.getItem('playersDb'));
+    if (playersDataBase) {
+        return;
+    } else {
+        playersDataBase = [];
+        return pops();
+    }
 }
-
-
 
 function pops() { // first popup intro to ask how many players have
     popup.style.display = "block";
@@ -73,6 +70,19 @@ function pops() { // first popup intro to ask how many players have
 
 }
 
+
+gamesData.forEach((v) => {
+    return gameBoard.innerHTML += `<div class="gameButton" style="background-image: url(${v.imgUrl})"><span class="gameInfo" onclick=gameIframe(${v.id})>
+${v.name} <br>
+${v.desc} <br> 
+דירוג: ${v.rating}
+</span></div>`
+})
+
+function gameIframe(id) {
+    main.innerHTML = `<iframe src="${gamesData[id].link}" width="90%" height="90%" frameborder="0">`
+
+}
 
 function funcpop1() { //TAKES THE PLAYES INFO ACCORDING TO TOTALPLAYERS
     totalPlayers = document.getElementById("playersCount").value
@@ -230,8 +240,14 @@ function nextPlayer(i) {
         popIntro.innerHTML = `     <p class="popText">סיימנו, אפשר להתחיל לשחק(:</p>
         <div class="gamePad"><img src="./images/gamepad.png"/></div>`
         setTimeout(() => { popup.style.display = "none"; }, 3000)
+        localStorage.setItem("playersDb", JSON.stringify(playersDataBase))
 
     }
+}
+
+function playersManagment() {
+
+
 }
 
 
