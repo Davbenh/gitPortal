@@ -6,35 +6,35 @@ const gamesData = [{
     name: "המשחק של ישראל",
     desc: "משחק הזיכרון של ישראל, המשחק בסגנון הארי פוטר.",
     link: "./games/yisrael/index.html",
-    imgUrl: "./gamesImages/101.jpg",
+    imgUrl: "./gamesImages/101.png",
     rating: 0
 }, {
     id: 1,
     name: "המשחק של גיל כוכבי",
     desc: "משחק הזיכרון של גיל, בסגנון מארוול. חובה לשחק ולהנות!",
     link: "./games/gil/cardPlay/index.html",
-    imgUrl: "./gamesImages/102.jpg",
+    imgUrl: "./gamesImages/102.png",
     rating: 0
 }, {
     id: 2,
     name: "המשחק של קובי",
     desc: "משחק הזיכרון של קובי, משחק זכרון אותיות.",
     link: "./games/kobi/index.html",
-    imgUrl: "./gamesImages/103.jpg",
+    imgUrl: "./gamesImages/103.png",
     rating: 0
 }, {
     id: 3,
     name: "משחק הזיכרון של אלישע",
     desc: "המשחק של אלישע אייזק, משחק בעלי החיים.",
     link: "./games/elisha/index.html",
-    imgUrl: "./gamesImages/104.jpg",
+    imgUrl: "./gamesImages/104.png",
     rating: 0
 }, {
     id: 4,
     name: "משחק הזיכרון של דודו",
     desc: "משחק הזיכרון של דודו, משחק הצבעים.",
     link: "./games/dudu/index.html",
-    imgUrl: "./gamesImages/105.jpg",
+    imgUrl: "./gamesImages/105.png",
     rating: 0
 }]
 
