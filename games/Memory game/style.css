@@ -21,22 +21,33 @@ section{
     pointer-events: none;
 }
 .card{
-    margin: 4px;
+    margin: 8px;
+    width: 90px;
+    height: 110px;
+    border: ridge goldenrod 6px;
+    border-radius: 10px;
     position: relative;
     transform-style: preserve-3d;
     transition:all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: black 0px 5px 15px, ;
 }
+
 .back{
-    background-color: white;
+    background-color: rgb(221, 212, 200);
     backface-visibility: hidden;
 }
 .toggleCard{
     transform: rotateY(180deg);
+    transition: 1s;
+    box-shadow: 2px 0px 20px gold, 0px 2px 20px gold,
+    0px -2px 20px gold, -2px 0px 20px gold;
 }
 h1{
     border: ridge goldenrod 3px;
-    color: green;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 5px;
+    border-radius: 15px;
+    color:goldenrod;
+    box-shadow:1px 0px 20px gold, 0px 1px 20px gold,
+    0px -1px 20px gold, -1px 0px 20px gold; ;
+    font-family:'Times New Roman', Times, serif;
+    padding: 8px;
 }

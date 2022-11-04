@@ -1,6 +1,6 @@
 // Grab a couple of things
 const section = document.querySelector('section');
-const playerLivesCount = document.querySelector('span');
+const playerLivesCount = document.querySelector('.playerLivesCount');
 let playerLives = 6;
 
 // Link text
@@ -26,6 +26,7 @@ const getData = () => [
     {imgSrc: "./Images/Sorting hat.jfif", Name: "Sorting hat"},
 ]
 
+// Randomize
 const randomize = () => {
     const cardData = getData();
     cardData.sort(()=> Math.random()-0.5);
@@ -85,12 +86,12 @@ const checkCards = (e) => {
         });
         playerLives--;
         playerLivesCount.textContent = playerLives;
-        playerLives === 0? restart("try again ;("):null;
+        playerLives === 0? restart("Try again ;("):null;
     }
 }
 // check if we won the game
 if(toggleCard.length === 16){
-    restart("you win!!! :)");
+    restart("You win!!! :)");
 }
 };
 // restart
