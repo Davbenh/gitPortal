@@ -1,40 +1,40 @@
 //GLOBAL V
 let totalPlayers;
-const playersDataBase = []
+let playersDataBase = []
 const gamesData = [{
-    id: 101,
+    id: 0,
     name: "המשחק של ישראל",
     desc: "משחק הזיכרון של ישראל, המשחק בסגנון הארי פוטר.",
     link: "./games/yisrael/index.html",
-    imgUrl: "./gamesImages/101.jpg",
+    imgUrl: "./gamesImages/101.png",
     rating: 0
 }, {
-    id: 102,
+    id: 1,
     name: "המשחק של גיל כוכבי",
     desc: "משחק הזיכרון של גיל, בסגנון מארוול. חובה לשחק ולהנות!",
     link: "./games/gil/cardPlay/index.html",
-    imgUrl: "./gamesImages/102.jpg",
+    imgUrl: "./gamesImages/102.png",
     rating: 0
 }, {
-    id: 103,
+    id: 2,
     name: "המשחק של קובי",
     desc: "משחק הזיכרון של קובי, משחק זכרון אותיות.",
     link: "./games/kobi/index.html",
-    imgUrl: "./gamesImages/103.jpg",
+    imgUrl: "./gamesImages/103.png",
     rating: 0
 }, {
-    id: 104,
+    id: 3,
     name: "משחק הזיכרון של אלישע",
     desc: "המשחק של אלישע אייזק, משחק בעלי החיים.",
     link: "./games/elisha/index.html",
-    imgUrl: "./gamesImages/104.jpg",
+    imgUrl: "./gamesImages/104.png",
     rating: 0
 }, {
-    id: 105,
+    id: 4,
     name: "משחק הזיכרון של דודו",
     desc: "משחק הזיכרון של דודו, משחק הצבעים.",
     link: "./games/dudu/index.html",
-    imgUrl: "./gamesImages/105.jpg",
+    imgUrl: "./gamesImages/105.png",
     rating: 0
 }]
 
@@ -43,16 +43,19 @@ const spanclose = document.getElementsByClassName("close")[0];
 const pop1 = document.getElementById("pop1");
 const popIntro = document.getElementById("popIntro")
 const gameBoard = document.getElementsByClassName("gameBoard")[0]
-
-gamesData.forEach((v) => {
-    return gameBoard.innerHTML += `<div class="gameButton" style="background-image: url(${v.imgUrl})"><a href="${v.link}"><span class="gameInfo">
-${v.name} <br>
-${v.desc} <br>
-דירוג: ${v.rating}
-</span></a></div>`
-})
+const main = document.getElementsByClassName("main")[0]
 
 
+
+function init() {
+    playersDataBase = JSON.parse(window.localStorage.getItem('playersDb'));
+    if (playersDataBase) {
+        return;
+    } else {
+        playersDataBase = [];
+        return pops();
+    }
+}
 
 function pops() { // first popup intro to ask how many players have
     popup.style.display = "block";
@@ -67,6 +70,19 @@ function pops() { // first popup intro to ask how many players have
 
 }
 
+
+gamesData.forEach((v) => {
+    return gameBoard.innerHTML += `<div class="gameButton" style="background-image: url(${v.imgUrl})"><span class="gameInfo" onclick=gameIframe(${v.id})>
+${v.name} <br>
+${v.desc} <br> 
+דירוג: ${v.rating}
+</span></div>`
+})
+
+function gameIframe(id) {
+    main.innerHTML = `<iframe src="${gamesData[id].link}" width="90%" height="90%" frameborder="0">`
+
+}
 
 function funcpop1() { //TAKES THE PLAYES INFO ACCORDING TO TOTALPLAYERS
     totalPlayers = document.getElementById("playersCount").value
@@ -224,8 +240,14 @@ function nextPlayer(i) {
         popIntro.innerHTML = `     <p class="popText">סיימנו, אפשר להתחיל לשחק(:</p>
         <div class="gamePad"><img src="./images/gamepad.png"/></div>`
         setTimeout(() => { popup.style.display = "none"; }, 3000)
+        localStorage.setItem("playersDb", JSON.stringify(playersDataBase))
 
     }
+}
+
+function playersManagment() {
+
+
 }
 
 
