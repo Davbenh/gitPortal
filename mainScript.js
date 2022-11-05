@@ -49,7 +49,7 @@ const main = document.getElementsByClassName("main")[0]
 
 function init() {
     playersDataBase = JSON.parse(window.localStorage.getItem('playersDb'));
-    if (playersDataBase) {
+    if (playersDataBase || playersDataBase != null || playersDataBase == []) {
         return;
     } else {
         playersDataBase = [];
@@ -265,10 +265,101 @@ function newPlayerPush(playerId, playerName, avatarUrl) { //PLAYERS DB CONSTRUCT
 }
 
 
-
-
-
 // When the user clicks on <span> (x), close the modal
 spanclose.onclick = function() {
     popup.style.display = "none";
+}
+
+function playersRatingList() {
+
+    playersDataBase = JSON.parse(window.localStorage.getItem('playersDb'));
+    if (!playersDataBase) {
+        return main.innerHTML = `<h1 class="highlight">אין שחקנים להצגה</h1>`;
+    }
+    let playersRatingSort = playersDataBase.sort((a, b) => b.totalPoints - a.totalPoints)
+    let playersTableData = `<h1 class="highlight">טבלת דירוג השחקנים</h1>`;
+    playersRatingSort.forEach((v, i) => {
+        return playersTableData += `
+      <tr>
+			<td class="tabPlace">${i+1}</td>
+			<td>${v.id}</td>
+			<td>${v.name}</td>
+			<td><img class="listAvatar" width="50px" height="50px" src="${v.avUrl}"</td>
+			<td>${v.totalPoints}</td>
+		</tr>`
+    })
+    return main.innerHTML = `<table class="scoreTable">
+	<thead>
+		<tr>
+			<td>מקום</td>
+			<td>id</td>
+			<td>שם</td>
+			<td>אווטר</td>
+			<td>ניקוד</td>
+		</tr>
+	</thead>
+	<tbody>
+${playersTableData}
+    </tbody>
+    </table>`
+
+
+}
+
+function playersList() {
+    if (!playersDataBase) {
+        return main.innerHTML = `<h1 class="highlight">אין שחקנים להצגה</h1>`;
+    }
+    main.innerHTML = ""
+    playersDataBase = JSON.parse(window.localStorage.getItem('playersDb'));
+    let playersRatingSort = playersDataBase.sort((a, b) => a.id - b.id)
+    let playersTableData = `<h1 class="highlight">ניהול שחקנים</h1>`;
+    playersDataBase.forEach((v, i) => {
+        return playersTableData += `
+      <tr>
+			<td>${i+1}</td>
+			<td class="tabPlace">${v.id}</td>
+			<td>${v.name}</td>
+			<td><img class="listAvatar" width="50px" height="50px" src="${v.avUrl}"</td>
+			<td>${v.totalPoints}</td>
+			<td><img class="delbtn" src="./images/delbtn.png" onclick="delPayer(${v.id})"></td>
+		</tr>`
+    })
+    return main.innerHTML = `<table class="playerList">
+	<thead>
+		<tr>
+			<td>מקום</td>
+			<td>id</td>
+			<td>שם</td>
+			<td>אווטר</td>
+			<td>ניקוד</td>
+			<td>מחק שחקן</td>
+		</tr>
+	</thead>
+	<tbody>
+${playersTableData}
+    </tbody>
+    </table>`
+
+}
+
+function delPayer(id) {
+    playersDataBase = JSON.parse(window.localStorage.getItem('playersDb'));
+    const indexOfObject = playersDataBase.findIndex(object => {
+        return object.id === id;
+    });
+
+    if (playersDataBase.length > 1) {
+        playersDataBase.splice(indexOfObject, 1)
+        localStorage.setItem("playersDb", JSON.stringify(playersDataBase))
+        playersDataBase = JSON.parse(window.localStorage.getItem('playersDb'));
+        return playersList();
+    } else {
+        playersDataBase = [];
+        localStorage.removeItem("playersDb")
+        return playersList();
+    }
+
+
+
 }

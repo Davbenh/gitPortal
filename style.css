@@ -68,9 +68,9 @@
         margin: 0 auto;
         align-self: center;
         text-align: center;
-        padding: 8vw 0;
+        margin: 4vw 0;
         width: 90vw;
-        height: 90vh;
+        min-height: 100vh;
     }
     
     h1 {
@@ -320,3 +320,90 @@
         height: 8vw;
     }
     /* end style for scroll bar    */
+    
+    .scoreTable {
+        border-collapse: collapse;
+        font-family: Tahoma, Geneva, sans-serif;
+        width: 60%;
+    }
+    
+    .scoreTable td {
+        padding: 15px;
+    }
+    
+    .scoreTable thead td {
+        background-color: #54585d;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+        border: 1px solid #54585d;
+    }
+    
+    .scoreTable tbody td {
+        color: #636363;
+        border: 1px solid #dddfe1;
+    }
+    
+    .scoreTable tbody tr {
+        background-color: #f9fafb;
+    }
+    
+    .scoreTable tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+    
+    .scoreTable tbody tr:nth-child(1) {
+        background-color: #f2f23d;
+    }
+    
+    .scoreTable tbody tr:nth-child(2) {
+        background-color: #a0a09f;
+    }
+    
+    .scoreTable tbody tr:nth-child(3) {
+        background-color: #f5a383;
+    }
+    
+    .tabPlace {
+        font-size: 1.6rem;
+        color: #000000;
+        font-weight: bold;
+    }
+    /*player managment list */
+    
+    .playerList {
+        border-collapse: collapse;
+        font-family: Tahoma, Geneva, sans-serif;
+        width: 60%;
+    }
+    
+    .playerList td {
+        padding: 15px;
+    }
+    
+    .playerList thead td {
+        background-color: #54585d;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+        border: 1px solid #54585d;
+    }
+    
+    .playerList tbody td {
+        color: #636363;
+        border: 1px solid #dddfe1;
+    }
+    
+    .playerList tbody tr {
+        background-color: #f9fafb;
+    }
+    
+    .playerList tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+    
+    .tabPlace {
+        font-size: 1.6rem;
+        color: #000000;
+        font-weight: bold;
+    }
