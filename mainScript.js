@@ -80,7 +80,7 @@ ${v.desc} <br>
 })
 
 function gameIframe(id) {
-    main.innerHTML = `<iframe src="${gamesData[id].link}" width="90%" height="90%" frameborder="0">`
+    main.innerHTML = `<iframe src="${gamesData[id].link}" width="90%" frameborder="0">`
 
 }
 
@@ -307,6 +307,7 @@ ${playersTableData}
 }
 
 function playersList() {
+    playersDataBase = JSON.parse(window.localStorage.getItem('playersDb'));
     if (!playersDataBase) {
         return main.innerHTML = `<h1 class="highlight">אין שחקנים להצגה</h1>`;
     }
