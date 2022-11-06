@@ -80,7 +80,7 @@ ${v.desc} <br>
 })
 
 function gameIframe(id) {
-    main.innerHTML = `<iframe src="${gamesData[id].link}" width="90%" frameborder="0">`
+    main.innerHTML = `<iframe src="${gamesData[id].link}" width="90%"  height="100%" frameborder="0">`
 
 }
 

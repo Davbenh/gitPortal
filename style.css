@@ -69,8 +69,8 @@
         text-align: center;
         width: 90vw;
         height: 100vh;
+        margin: 1vh 0 6% 0;
         padding: 0;
-        margin: 0;
     }
     
     h1 {
@@ -405,8 +405,6 @@
         background-color: #ffffff;
     }
     
-    .tabPlace {
-        font-size: 1.6rem;
-        color: #000000;
-        font-weight: bold;
+    .delbtn {
+        cursor: pointer;
     }
