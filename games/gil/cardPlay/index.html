@@ -11,16 +11,40 @@
   <body>
     <div class="game">
       <div class="controls">
-        <button>Start</button>
         <div class="stats">
-          <div class="moves">moves:</div>
-          <span class="timer" id="stopwatch">00:00:00</span>
+          <form id="myform">
+            <h1 class="marvel">marvel memory</h1>
+            <span style="margin-top: 10px" id="usernameSpan"></span>
+            <span style="margin-top: 10px" id="usernameSpan"></span>
+            <button class="btn" onclick="changeUser()">Change User</button>
+          
+            <input id="username" type="text" name="username" placeholder=" your name">
+            <button onclick='addUser()' type="submit">add user</button>
+        </form>
+        <div id="score1">
+          <span >your score:</span> <span id="score"> 0</span> 
+        </div>
+
+        <div id="operatingInstructions">
+        <ul>
+          game Rules :
+         <li>You have to choose the right pair according to your memory</li>
+         <li>For each correct guess you will get 10 points </li>
+          <li>For each wrong guess you will lose 2 points from the next time </li>
+        </ul>
+        </div>
+
+        <div id="time"><h1>your time:</h1></div>
+        <h1><span class="timer" id="stopwatch">00:00:00</span></h1>
         </div>
       </div>
       <div class="board-container">
         <div class="board" data-dimension="4"></div>
         <div class="win"></div>
       </div>
+    </div>
+    <div>
+      
     </div>
 
     <section class="memory-game" id="gameBoard">
@@ -202,7 +226,19 @@
           alt="Memory Card"
           draggable="false"
         />
-      </div>
+      <!-- </div> -->
+      <!-- <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Congratulations 🎉</h2>
+            <a class="close" href="#">×</a>
+            <div class="content-1">
+                Congratulations you're a winner 🎉🎉
+            </div>
+            <div class="content-2">
+                <p>You made <span id="finalMove"> </span> moves </p>
+                <p>in <span id="totalTime"> </span> </p>
+                <p>Rating:  <span id="starRating"></span></p>
+            </div> -->
     </section>
   </body>
 </html>
